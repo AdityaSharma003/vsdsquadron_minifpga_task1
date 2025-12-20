@@ -25,7 +25,7 @@
 2. Make the riscv_toolchain directory where riscv64 gcc compiler will get downloaded, unzip it and install it.
 3. Then set the bin path of the gcc compiler in the environment variables.
 
-## Local Machine Preperation (tricky part)
+## Setup of the Local Machine (tricky part)
 **Steps involved in it**
 
 1. Download Ubuntu from the official website.
