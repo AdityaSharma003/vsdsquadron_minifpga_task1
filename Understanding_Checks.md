@@ -14,4 +14,4 @@ Ans3. The RISC-V core uses Memory-Mapped I/O (MMIO) to access both RAM and perip
 
 ## Q4. Where would a new FPGA IP block logically integrate in this system?
 
-Ans4. 
+Ans4. A new FPGA IP block is basically a new hardware module (kind of creates a interface to talk between fpga and the external conneected hardware)  that gets "plugged in" as a peripheral on the main system bus, and the RISC-V core talks to it by simply sending data to a specific assigned address.
