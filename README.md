@@ -2,7 +2,7 @@
 
 This repository contains the informartion about steps followed in the setting up of the risc-v toolchain environment for the smooth FPGA IP development.
 
-*note:- OS used for setting up is Ubuntu (recommended) which runs on linux kernal*
+*note:- OS used for setting up is Ubuntu (recommended) which runs on linux kernel*
 
 ## Setup of the GitHub Codespace
 
