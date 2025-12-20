@@ -65,7 +65,7 @@
 <p align="center">
   <img src="screenshots/Offline_Setup_NotSOComplete.jpeg" width="600px">
   <br>
-  <b>Figure 2: This contained the step just above the final output of file riscv_logo.o"</b>
+  <b>Figure 2: This contained the step just above the final output of file riscv_logo.o for the local setted up VM"</b>
 </p>
 *Note:- I am getting issue while downloading spike in the local setup with the docker and without the docker that's why not getting the final output, hence working on it.
 Once I'll figure that out in the offline setup will attach here.
