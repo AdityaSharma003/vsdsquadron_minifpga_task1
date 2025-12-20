@@ -9,10 +9,42 @@
 3. After the succesfull build of the Codespace, verified the environment setup.
 4. Then run the simple c program and the edited version of it with the help of spike simulator.
 
+## C code Ouput without or with changes:
+
+<p align="center">
+  <img src="screenshots/Sum1ton_Output_githubcodespace.jpeg" width="600px">
+  <br>
+  <b>Figure 1: Output of the c code running through spike simulator with n = 9 and n = 15 respectively as seen in the terminal.</b>
+</p>
+
+## Final Ouput:
+
+<p align="center">
+  <img src="screenshots/codespace_Ouput_Task1.png" width="600px">
+  <br>
+  <b>Figure 2: This contained the final output of file riscv_logo.o with the modification of "TASK 1 by Aditya Sharma dated 20 December 2025"</b>
+</p>
+
 ## Setup of the noVNC GUI Desktop
 
 1. From the ports tab,  follow thw steps mentioned in the readme provided to us.
 2. Then running the same program in this noVNC Desktop as ran in the COdespace from the (native gcc compiler) and the (riscv gcc compiler and spike).
+
+## C code Ouput without or with changes:
+
+<p align="center">
+  <img src="screenshots/Sum1ton_Output_noVNC.jpeg" width="600px">
+  <br>
+  <b>Figure 1: Output of the c code running through spike simulator with n = 9 and n = 15 respectively as seen in the terminal.</b>
+</p>
+
+## Final Ouput:
+
+<p align="center">
+  <img src="screenshots/noVNC_Ouput_Task1.png" width="600px">
+  <br>
+  <b>Figure 2: This contained the final output of file riscv_logo.o with the modification of "TASK 1 by Aditya Sharma dated 20 December 2025"</b>
+</p>
 
 ## Verification of the RISC-V Reference Flow
 
@@ -28,6 +60,14 @@
 4. After everything is installed, now run the code which will produce the output result step by step as mentioned in the readme file of vsdfpga_labs after installing the pre-requisites needed for the completion of the task1.
 5. Change something in the riscv_logo.c file while opening it through nano gnu, (for example the date and the name).
 
+## Final Ouput:
 
-And Voilla! Task 1 is done and dusted.
-Now we have setup a clean working environment for the FPGA development purposes.
+<p align="center">
+  <img src="screenshots/Offline_Setup_NotSOComplete.jpeg" width="600px">
+  <br>
+  <b>Figure 2: This contained the step just above the final output of file riscv_logo.o"</b>
+</p>
+*Note:- I am getting issue while downloading spike in the local setup with the docker and without the docker that's why not getting the final output, hence working on it.
+Once I'll figure that out in the offline setup will attach here.
+
+Yay, now we have setup a clean working environment for the FPGA development purposes for the Git CodeSpace and noVNC.
