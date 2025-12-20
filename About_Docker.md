@@ -20,7 +20,7 @@ sudo systemctl enable docker
 ```
 Step 5. Reads the Dockerfile in the current folder to create a reusable virtual image named "riscv-env" containing all the hardware tools.
 ```bash
-docker build -t riscv-env .
+sudo docker build -t riscv-env .
 ```
 ##
 ## *Note - The DockerFile attached in this repository is the one that I've used for my setup, It may be different in your case.*
