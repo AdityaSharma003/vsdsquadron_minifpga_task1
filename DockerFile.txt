@@ -1,0 +1,43 @@
+FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+
+# 1) Install Core Hardware and Build Dependencies
+RUN apt-get update && apt-get install -y \
+    git curl wget build-essential gcc g++ make pkg-config \
+    autoconf automake autotools-dev libtool \
+    bison flex texinfo gperf patchutils \
+    gawk libmpc-dev libmpfr-dev libgmp-dev \
+    zlib1g-dev libexpat1-dev \
+    device-tree-compiler libfdt-dev \
+    python3 iverilog gtkwave vim \
+ && rm -rf /var/lib/apt/lists/*
+
+# 2) Prebuilt SiFive RISC-V Toolchain
+WORKDIR /opt
+RUN wget -q https://static.dev.sifive.com/dev-tools/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz \
+ && tar -xzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz \
+ && mv riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14 /opt/riscv \
+ && rm -f *.tar.gz
+
+# 3) Build Spike (The RISC-V Simulator)
+WORKDIR /tmp
+RUN git clone --depth 1 https://github.com/riscv-software-src/riscv-isa-sim.git \
+ && cd riscv-isa-sim && mkdir build && cd build \
+ && ../configure --prefix=/opt/riscv \
+ && make -j$(nproc) && make install \
+ && rm -rf /tmp/*
+
+# 4) Build riscv-pk (The Proxy Kernel)
+WORKDIR /tmp
+RUN git clone https://github.com/riscv-software-src/riscv-pk.git \
+ && cd riscv-pk && git checkout v1.0.0 \
+ && mkdir build && cd build \
+ && PATH="/opt/riscv/bin:$PATH" \
+    CC=riscv64-unknown-elf-gcc ../configure --prefix=/opt/riscv --host=riscv64-unknown-elf \
+ && make -j$(nproc) && make install \
+ && rm -rf /tmp/*
+
+# 5) Set Environment Variables
+ENV PATH="/opt/riscv/bin:/usr/local/bin:/usr/bin:/bin"
+WORKDIR /work
+CMD ["/bin/bash"]
