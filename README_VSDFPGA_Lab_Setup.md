@@ -1,6 +1,6 @@
 # [VSDSquadron FPGA mini](https://www.vlsisystemdesign.com/vsdsquadronfm/) Lab: Basic Message Display on RISC-V core
 <div align="center">
-  <img src="screenshots/outputForReadme.jpg" alt="RISC-V Logo" width="50%"/>
+  <img src="screenshots/outputForReadme.png" alt="RISC-V Logo" width="50%"/>
 </div>
 
 ## Prerequisites
@@ -53,7 +53,8 @@ source ~/.bashrc
 Expected output:
 
 ```text
-As I have edit it with my name and date so mine is looking like the figure shown below, but yours will also be shown like this with your changes.
+As I have edit it with my name and date so mine is looking like the figure shown below,
+but yours will also be shown like this with your changes.
 
-![RISC-V Logo](screenshots/outputForReadme.jpg)
+![RISC-V Logo](screenshots/outputForReadme.png)
 ```
