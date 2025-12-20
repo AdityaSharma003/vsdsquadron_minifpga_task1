@@ -32,7 +32,7 @@ source ~/.bashrc
    ```
 
 
-## Building & Flashing
+## Checking the Installation of RISC-V toolchain
 1. Review the RISC-V logo code (do not modify):
    ```bash
    cd ~/vsdfpga_labs/basicRISCV/Firmware
@@ -50,11 +50,11 @@ source ~/.bashrc
    spike pk riscv_logo.o
    ```
 
-Expected output:
+4.Expected output:
 
-```text
+
 As I have edit it with my name and date so mine is looking like the figure shown below,
 but yours will also be shown like this with your changes.
 
 ![RISC-V Logo](screenshots/outputForReadme.png)
-```
+
