@@ -1,27 +1,7 @@
 
 # Getting Started with RISC-V on GitHub Codespaces
 
-Follow the steps below to set up and run programs in your own Codespace.
-
----
-
-## Step 1. Open the Repository
-
-Go to:  
-[https://github.com/vsdip/vsd-riscv2](https://github.com/vsdip/vsd-riscv2)
-
----
-
-## Step 2. Create a Codespace
-
-1. Log in with your GitHub account.
-2. Click the green **Code** button.
-3. Select **Open with Codespaces** → **New codespace**.
-4. Wait while the environment builds. (First time may take 10–15 minutes.)
-
----
-
-## Step 3. Verify the Setup
+## Step 1. Verify the Setup
 
 In the terminal that opens, type:
 
@@ -35,7 +15,7 @@ You should see version information for each tool.
 
 ---
 
-## Step 4. Run Your First Program
+## Step 2. Run Your First Program
 
 1. Go to the `samples` folder.
 2. Compile the program:
@@ -55,12 +35,20 @@ Expected output:
 Sum from 1 to 9 is 45
 ```
 
----
+## Step 3. Next Steps
 
-## Step 5. Next Steps
+Change the value of n from 9 to 15 in the file sum1ton.c, and use below command to open the file.
 
-* You can edit and run your own C programs.
-* You can also try Verilog programs using `iverilog`.
+```bash
+gedit sum1ton.c
+```
+Now save the file and repeat from step 2.2 to step2.3.
+
+Expected output:
+
+```text
+Sum from 1 to 15 is 120
+```
 
 ---
 
@@ -70,7 +58,7 @@ The following steps show how to use a full Linux desktop inside your Codespace a
 
 ---
 
-## Step 6. Launch the noVNC Desktop
+## Step 4. Launch the noVNC Desktop
 
 1. In your Codespace, click the **PORTS** tab.
 
@@ -90,7 +78,7 @@ The following steps show how to use a full Linux desktop inside your Codespace a
 
 ---
 
-## Step 7. Open a Terminal Inside the Desktop
+## Step 5. Open a Terminal Inside the Desktop
 
 1. Right-click anywhere on the desktop background.
 2. Select **Open Terminal Here**.
@@ -101,7 +89,7 @@ A terminal window will open on the desktop.
 
 ---
 
-## Step 8. Navigate to the Sample Programs
+## Step 6. Navigate to the Sample Programs
 
 In the terminal, go to the workspace and then to the `samples` folder:
 
@@ -117,7 +105,7 @@ You should see files like `sum1ton.c`, `1ton_custom.c`, `load.S`, and `Makefile`
 
 ---
 
-## Step 9. Compile and Run Using Native GCC (x86)
+## Step 7. Compile and Run Using Native GCC (x86)
 
 First, compile and run the C program with the standard `gcc` compiler:
 
@@ -136,7 +124,7 @@ Sum from 1 to 9 is 45
 
 ---
 
-## Step 10. Compile and Run Using RISC-V GCC and Spike
+## Step 8. Compile and Run Using RISC-V GCC and Spike
 
 Now compile the same program for RISC-V and run it on the Spike ISA simulator:
 
@@ -151,7 +139,7 @@ You will see the proxy kernel (`pk`) messages and then the program output.
 
 ---
 
-## Step 11. Edit the C Program Using gedit (GUI Editor)
+## Step 9. Edit the C Program Using gedit (GUI Editor)
 
 To edit the program using a graphical editor:
 
