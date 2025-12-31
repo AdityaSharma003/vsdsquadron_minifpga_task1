@@ -28,7 +28,7 @@ sudo docker build -t riscv-env .
 ```
 Step 5b. Run the container.
 ```bash
-docker run -it my_riscv_env
+sudo docker run -it -v ~/<working_directory>:/work my_riscv_env
 ```
 ##
 ## *Note - The DockerFile attached in this repository is the one that I've used for my setup, It may be different in your case.*
