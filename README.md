@@ -67,7 +67,7 @@ This repository contains the informartion about steps followed in the setting up
 1. Download Ubuntu from the official website.
 2. Download the Oracle Virtual box, install it and make a VM in it. (Note:- I named my VM as VM_1).
 3. Install the VS Code in it and clone all the repository locally in VM file explorer system.
-4. Now install the Docker and make a Docker image using the Dockerfile provided in this repository using the steps mentioned in **`About_Docker.md`** file, according to the need (Note:- I just removed the part that i need for the noVNC setup and rest of the libraries installation was done as i will going to need them some day for this internship, and if you want to add more tools you can add on your own and then makes the image).
+4. Now install the Docker and make a Docker image using the Dockerfile provided in this repository using the steps mentioned in **`About_Docker.md`** file, according to the need (Note:- I just removed the part that i need for the noVNC setup and rest of the libraries installation was done as i will going to need them some day for this internship, and if you want to add more tools you can add on your own and then makes the image). **`(Recommendation - Install the libraries present in the dockerfile manually by by-passing the docker file installation method for ease of use of the setup)`**
 5. After everything is installed, follow the readme file **`README_VSDFPGA_Lab_Setup.md`** and in this running the pre-requisite part is optional as docker file already have installed them but if that fails to do so run the prerequisites part also (recommendation - run it for the double check).
 6. After following the above steps, output should looks like Figure 5.
 
