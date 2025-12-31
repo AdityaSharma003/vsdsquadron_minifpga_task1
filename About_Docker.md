@@ -58,19 +58,5 @@ Step 2. Open a new terminal on your VM and run this command and again open the n
 ```bash
 sudo docker commit my_riscv_container my_riscv_env
 ```
-Step 6. Make the container gets open everytime you'll open the terminal (note:- after opening terminal, now it will ask for the password).
-```bash
-sudo docker run -d --name my_riscv_container -v $(pwd):/work my_riscv_env tail -f /dev/null
-```
-Step 7. Edit the .bashrc file.
-```bash
-cd ~
-nano ~/.bashrc
-```
-Scroll to the bottom and paste these lines at the bottom of the file and save the file:
-```bash
-sudo docker start my_riscv_container > /dev/null 2>&1
-sudo docker exec -it my_riscv_container /bin/bash
-```
 
 ## *Note - The DockerFile attached in this repository is the one that I've used for my setup, It may be different in your case.*
