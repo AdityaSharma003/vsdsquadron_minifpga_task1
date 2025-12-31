@@ -18,11 +18,11 @@ Step 4. Configures the Docker service to start automatically every time VM boots
 ```bash
 sudo systemctl enable docker
 ```
-Step 5. Reads the Dockerfile in the current folder to create a reusable virtual image named "riscv-env" containing all the hardware tools.
+Step 5a. Reads the Dockerfile in the current folder to create a reusable virtual image named "riscv-env" containing all the hardware tools.
 ```bash
 sudo docker build -t riscv-env
 ```
-Step 5. Run the container.
+Step 5b. Run the container.
 ```bash
 docker run -it my_riscv_env
 ```
