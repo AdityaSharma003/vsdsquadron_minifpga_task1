@@ -26,9 +26,24 @@ Step 5a. Reads the Dockerfile in the current folder to create a reusable virtual
 ```bash
 sudo docker build -t riscv-env .
 ```
-Step 5b. Run the container.
+Step 5b. Run the container and save the name of the container.
 ```bash
 sudo docker run -it -v ~/<working_directory>:/work my_riscv_env
 ```
+Step 6. Make the container gets open everytime you'll open the terminal (note:- after opening terminal, now it will ask for the password).
+```bash
+sudo docker run -d --name my_riscv_container -v $(pwd):/work my_riscv_env tail -f /dev/null
+```
+Step 7. Edit the .bashrc file.
+```bash
+cd ~
+nano ~/.bashrc
+```
+Scroll to the bottom and paste these lines at the bottom of the file and save the file:
+```bash
+sudo docker start my_riscv_container > /dev/null 2>&1
+sudo docker exec -it my_riscv_container /bin/bash
+```
+Step 8. Close the terminal and reopen it, then you'll see -> **`root@<random_number>:/work# `**. If yes then you have the correct setup to move on and if not check for the discrepency at your end.
 ##
 ## *Note - The DockerFile attached in this repository is the one that I've used for my setup, It may be different in your case.*
