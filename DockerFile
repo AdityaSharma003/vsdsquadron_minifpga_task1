@@ -13,7 +13,13 @@ RUN apt-get update && apt-get install -y \
     gawk libmpc-dev libmpfr-dev libgmp-dev \
     zlib1g-dev libexpat1-dev \
     device-tree-compiler libfdt-dev \
-    python3 iverilog gtkwave nano vim \
+    python3 vim nano \
+    # --- ADDED FPGA TOOLS BELOW ---
+    yosys \
+    nextpnr-ice40 \
+    fpga-icestorm \
+    iverilog \
+    gtkwave \
  && rm -rf /var/lib/apt/lists/*
 
 # 2) Download and Install RISC-V Toolchain
@@ -49,3 +55,4 @@ RUN git clone https://github.com/riscv-software-src/riscv-pk.git \
 # 5) Final Workspace Setup
 WORKDIR /work
 CMD ["/bin/bash"]
+
