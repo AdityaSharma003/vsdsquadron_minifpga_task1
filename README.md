@@ -75,14 +75,13 @@ note :- if the docker file fails to install the pre-requisities, install them ma
 ## Final Ouput:
 
 <p align="center">
-  <img src="screenshots/Offline_Setup_NotSOComplete.jpeg" width="600px">
+  <img src="screenshots/Screenshot 2026-01-01 001704.png" width="600px">
   <br>
   <b>Figure 5: This contained the step just above the final output of file riscv_logo.o for the local setted up VM"</b>
 </p>
 
 ##
 
-*Note:- I am getting issue while downloading spike in the local setup with the docker and without the docker that's why not getting the final output, hence working on it.
-Once I'll figure that out in the offline setup will attach here.
 
-Yay, now we have setup a clean working environment for the FPGA development purposes for the Git CodeSpace and noVNC.
+And, Voila!!! 
+We have setup a clean working environment for the FPGA development purposes for the Git CodeSpace and noVNC and on the local machine.
