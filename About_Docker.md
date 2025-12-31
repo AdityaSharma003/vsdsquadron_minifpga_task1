@@ -2,9 +2,13 @@
 
 *This File contains the steps needed for the installation of the Docker and creating the image of the DockerFile given to us in the task1.*
 
-Step 1. Update the apt before installing anything (good practice)
+Step 1a. Update the apt before installing anything (good practice)
 ```bash 
 sudo apt-get update
+```
+Step 1b. Upgrade the apt before installing anything (good practice)
+```bash 
+sudo apt upgrade
 ```
 Step 2. Install the docker.io
 ```bash
