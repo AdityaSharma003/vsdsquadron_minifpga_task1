@@ -32,7 +32,11 @@ sudo docker run -it -v ~/<working_directory>:/work my_riscv_env
 ```
 Step 6. Make the container gets open everytime you'll open the terminal (note:- after opening terminal, now it will ask for the password).
 ```bash
-sudo docker run -d --name my_riscv_container -v $(pwd):/work my_riscv_env tail -f /dev/null
+sudo docker run -d --name my_riscv_container \
+    --privileged \
+    -v /dev/bus/usb:/dev/bus/usb \
+    -v $(pwd):/work \
+    my_riscv_env tail -f /dev/null
 ```
 Step 7. Edit the .bashrc file.
 ```bash
